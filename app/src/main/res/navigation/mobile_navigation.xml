@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.kidya_example.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.kidya_example.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.example.kidya_example.ui.share.ShareFragment"
+        android:label="menu_share"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/nav_grid"
+        android:name="com.example.kidya_example.ui.grid.GridFragment"
+        android:label="bottom_grid"
+        tools:layout="@layout/fragment_grid" />
+
+    <fragment
+        android:id="@+id/nav_basket"
+        android:name="com.example.kidya_example.ui.basket.BasketFragment"
+        android:label="bottom_basket"
+        tools:layout="@layout/fragment_basket" />
+
+    <fragment
+        android:id="@+id/nav_favourites"
+        android:name="com.example.kidya_example.ui.favourites.FavouritesFragment"
+        android:label="bottom_favourites"
+        tools:layout="@layout/fragment_favourites" />
+    <fragment
+        android:id="@+id/nav_favourites_back"
+        android:name="com.example.kidya_example.ui.favourites.FavouritesBackFragment"
+        android:label="fragment_favourites_back"
+        tools:layout="@layout/fragment_favourites_back" />
+    <fragment
+        android:id="@+id/nav_news_back"
+        android:name="com.example.kidya_example.ui.home.news.NewsBackFragment"
+        android:label="fragment_news_back"
+        tools:layout="@layout/fragment_news_back" />
+    <fragment
+        android:id="@+id/nav_grid_back"
+        android:name="com.example.kidya_example.ui.grid.GridBackFragment"
+        android:label="fragment_grid_back"
+        tools:layout="@layout/fragment_grid_back" />
+    <fragment
+        android:id="@+id/nav_kategory_back"
+        android:name="com.example.kidya_example.ui.home.categorii.KategoryBackFragment"
+        android:label="fragment_kategory_back"
+        tools:layout="@layout/fragment_kategory_back" />
+    <fragment
+        android:id="@+id/nav_skitka_back"
+        android:name="com.example.kidya_example.ui.home.skitka.SkitkaBackFragment"
+        android:label="fragment_skitka_back"
+        tools:layout="@layout/fragment_skitka_back" />
+    <fragment
+        android:id="@+id/nav_news_back_list"
+        android:name="com.example.kidya_example.ui.home.news.NewsBackListFragment"
+        android:label="fragment_news_back_list"
+        tools:layout="@layout/fragment_news_back_list" />
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.example.kidya_example.ui.drawer.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/nav_message"
+        android:name="com.example.kidya_example.ui.drawer.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/nav_bell"
+        android:name="com.example.kidya_example.ui.bell.BellFragment"
+        android:label="fragment_bell"
+        tools:layout="@layout/fragment_bell" />
+
+</navigation>

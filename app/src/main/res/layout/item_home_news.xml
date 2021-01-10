@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:strokeColor="#F5F5F9"
+            app:strokeWidth="1dp"
+            android:orientation="horizontal"
+            app:cardCornerRadius="20dp">
+
+        <ImageView
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="#fff"
+           android:scaleType="centerCrop"
+            android:id="@+id/imageDressNovosti"
+            android:src="@drawable/box"
+            />
+
+        </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/textDressNovosti"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/dress_name"
+                android:textColor="#262C6C"
+                android:maxLines="2"
+                android:paddingTop="4sp"
+                android:paddingBottom="4sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:paddingTop="4sp"
+                android:paddingBottom="4sp"
+                android:id="@+id/textDataNovosti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kids World Shop"
+                android:textColor="#262C6C" />
+
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

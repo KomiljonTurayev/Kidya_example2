@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:background="#F53688"
+            android:drawable="@color/colorPrimary"
+            android:id="@+id/nav_Мой_данные"
+            android:icon="@drawable/drawer_person"
+            android:iconTint="@color/main_color"
+            android:title="Мой данные"
+            >
+
+        </item>
+        <item
+            android:id="@+id/nav_Моизаказы"
+            android:icon="@drawable/drawer_basket"
+            android:title="Мои заказы" />
+        <item
+            android:id="@+id/nav_Избранные"
+            android:icon="@drawable/drawer_heart"
+            android:title="Избранные" />
+        <item
+            android:id="@+id/nav_Скидки"
+            android:icon="@drawable/drawer_prosent"
+            android:title="Скидки" />
+        <item
+            android:id="@+id/nav_Акции"
+            android:icon="@drawable/drawer_aksiya"
+            android:title="Акции" />
+        <item
+            android:id="@+id/nav_Сообщения"
+            android:icon="@drawable/drawer_message"
+            android:title="Сообщения" />
+    </group>
+
+    <item android:title="Справочная">
+        <menu>
+            <item
+                android:id="@+id/Инструкция"
+                android:title="Инструкция" />
+            <item
+                android:id="@+id/Правила_поведения"
+                android:title="Правила поведения" />
+            <item
+                android:id="@+id/Условия_доставки"
+                android:title="Условия доставки" />
+            <item
+                android:id="@+id/Условия_оплаты"
+                android:title="Условия оплаты" />
+            <item
+                android:id="@+id/Условия_возврата"
+                android:title="Условия возврата" />
+        </menu>
+    </item>
+
+    <item android:title="">
+        <menu>
+            <item
+                app:iconTint="#FFEB3B"
+                android:id="@+id/Выйти"
+                android:icon="@drawable/drawer_power"
+                android:title="Выйти" />
+
+            <item
+                android:id="@+id/uzbek_tilida"
+                android:title="O’zbek tilida" />
+
+            <item
+                android:id="@+id/Пользовательское_соглашение"
+                android:title="Пользовательское соглашение" />
+        </menu>
+    </item>
+
+</menu>

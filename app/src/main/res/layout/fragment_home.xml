@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_marginBottom="55dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_marginBottom="45dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerTop"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                 />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayoutViewPager2Top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00DDDDDD"
+                app:layout_constraintBottom_toTopOf="@+id/ll_top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="0dp"
+                app:tabMaxWidth="15dp"
+                app:tabMinWidth="14dp" />
+
+            <LinearLayout
+                android:clickable="true"
+                android:id="@+id/ll_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewPagerTop"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/textSkitka"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:padding="8dp"
+                    android:text="Скитки"
+                    android:textColor="#222C6B"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewPagerTop" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:padding="8dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/arrow" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerSkitka"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_top" />
+
+            <LinearLayout
+                android:id="@+id/ll_middle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerSkitka"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/textKategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Популярные категории"
+                    android:textColor="#222C6B"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerSkitka" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:src="@drawable/arrow"
+                    android:textColor="#222C6B" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerKategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_middle" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerMeddle"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerKategory">
+
+            </androidx.viewpager2.widget.ViewPager2>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayoutViewPager2Middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00DDDDDD"
+                app:layout_constraintBottom_toBottomOf="@+id/viewPagerMeddle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="0dp"
+                app:tabMaxWidth="20dp"
+                app:tabMinWidth="14dp" />
+
+            <LinearLayout
+                android:clickable="true"
+                android:id="@+id/ll_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewPagerMeddle"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/textNovosti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Новости"
+                    android:textColor="#222C6B"
+                    android:textSize="18sp"
+                    android:layout_margin="4dp"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewPagerMeddle" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:src="@drawable/arrow"
+                    android:textColor="#222C6B" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerNovosti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_bottom" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

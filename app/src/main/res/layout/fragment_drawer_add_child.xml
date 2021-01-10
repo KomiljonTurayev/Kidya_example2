@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout10"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20sp"
+    app:cardBackgroundColor="#F9F9FB"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:strokeColor="#fff"
+    app:strokeWidth="2dp"
+    tools:context=".ui.drawer.DrawerAddChildFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:padding="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="Добавить ребенка"
+                android:textColor="#2F3975"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:id="@+id/imageBackHome"
+                android:src="@drawable/ic_dialog_close" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="8dp"
+            android:orientation="vertical"
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                app:strokeColor="#385AA5"
+                android:background="#ffffff"
+                app:cardCornerRadius="10dp"
+                app:strokeWidth="2dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:id="@+id/editTextName"
+                    android:gravity="left"
+                    android:hint="Иванова Татьяна"
+                    android:inputType="text|textNoSuggestions"
+                    android:padding="10dp"
+                    android:paddingRight="30dp"
+                    android:singleLine="true"
+                    android:textColor="#262C6C"
+                    android:textColorHint="#000"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ffffff"
+                app:strokeColor="#385AA5"
+                app:cardCornerRadius="10dp"
+                app:strokeWidth="2dp">
+
+                <TextView
+                    android:id="@+id/date_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:background="#fff"
+                    android:ems="10"
+                    android:hint="28 марта 1989"
+                    android:padding="10dp"
+                    android:paddingEnd="30dp"
+                    android:singleLine="true"
+                    android:textColor="#262C6C"
+                    android:textColorHint="#000"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ffffff"
+                app:strokeColor="#385AA5"
+                app:cardCornerRadius="10dp"
+                app:strokeWidth="2dp">
+
+                <Spinner
+                    android:id="@+id/planets_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingTop="10dp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#ffffff"
+                app:cardCornerRadius="10dp"
+                app:strokeWidth="2dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"
+                    android:ems="10"
+                    android:textSize="14sp"
+                    android:id="@+id/btnAdd"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="Добавить"
+                    android:textColor="#fff"
+                    android:padding="10dp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageBackHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16sp"
+            android:background="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:text="Оформление заказа"
+            android:textColor="#222C6B"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="45dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_top"
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
+            app:cardBackgroundColor="#F9F9FB"
+            app:cardCornerRadius="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F9F9FB"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="В корзине 3 продукта"
+                    android:textColor="@color/main_blue"
+                    android:textSize="16sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F4F4F8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:background="@color/colorAccent"
+                        android:foregroundGravity="center"
+                        app:cardCornerRadius="10dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:src="@drawable/image_2" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Розовое платье c кружевами"
+                            android:textColor="#222C6B"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="245 000 сум"
+                            android:textColor="#222C6B"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kids World Shop"
+                            android:textColor="#A9ACC5"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_marginLeft="16dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_mask" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:background="@color/colorAccent"
+                        android:foregroundGravity="center"
+                        app:cardCornerRadius="10dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:src="@drawable/image_2" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Розовое платье c кружевами"
+                            android:textColor="#222C6B"
+                            android:textSize="14sp" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="245 000 сум"
+                            android:textColor="#222C6B"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="No Brand Shop"
+                            android:textColor="#A9ACC5"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="16dp"
+                        android:background="@drawable/ic_mask" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F4F4F8" />
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="#ffffff"
+                    app:cardCornerRadius="10dp"
+                    app:strokeColor="#385AA5"
+                    app:strokeWidth="2dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:background="@null"
+                        android:ems="10"
+                        android:gravity="left"
+                        android:hint="Введите промокод"
+                        android:inputType="text|textNoSuggestions"
+                        android:padding="10dp"
+                        android:paddingRight="30dp"
+                        android:singleLine="true"
+                        android:textColor="#262C6C"
+                        android:textColorHint="#262C6C"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:text="Если у вас есть промогод,
+                         введите эго и проверьте
+                         актуалность"
+                        android:textColor="#A9ACC5"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ic_button"
+                        android:gravity="center"
+                        android:text="проверить"
+                        android:textColor="#fff"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F4F4F8" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Стоимост"
+                            android:textColor="#A9ACC5"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Скитка"
+                            android:textColor="#A9ACC5"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Скитка по промокоду"
+                            android:textColor="#A9ACC5"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Доставка"
+                            android:textColor="#A9ACC5"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Итого"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="225 000 сум"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="12%"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="0%"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="15 000 сум"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="245 00 сум"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F4F4F8" />
+
+
+                <TextView
+                    android:id="@+id/textAuth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/main_blue"
+                    android:padding="16dp"
+                    android:text="@string/regis"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnAuth"
+                    android:text="АВТОРИЗИРОВАТЬЦЯ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginRight="55dp"
+                    android:background="@drawable/ic_button"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/llAuth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#ffffff"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:strokeColor="#385AA5"
+                        app:strokeWidth="2dp">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:ems="10"
+                            android:gravity="left"
+                            android:hint="ФИО"
+                            android:inputType="text|textNoSuggestions"
+                            android:padding="10dp"
+                            android:paddingRight="30dp"
+                            android:singleLine="true"
+                            android:textColor="#000"
+                            android:textColorHint="#262C6C"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#ffffff"
+                        app:cardCornerRadius="10dp"
+                        app:strokeColor="#385AA5"
+                        app:strokeWidth="2dp">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:background="@null"
+                            android:ems="10"
+                            android:gravity="left"
+                            android:hint="Телефон"
+                            android:inputType="text|textNoSuggestions"
+                            android:numeric="decimal"
+                            android:padding="10dp"
+                            android:paddingRight="30dp"
+                            android:phoneNumber="true"
+                            android:singleLine="true"
+
+                            android:textColor="#000"
+                            android:textColorHint="#262C6C"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#ffffff"
+                        app:cardCornerRadius="10dp"
+                        app:strokeColor="#385AA5"
+                        app:strokeWidth="2dp">
+
+
+                        <Spinner
+                            android:id="@+id/planets_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:paddingTop="10dp"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#ffffff"
+                        app:cardCornerRadius="10dp"
+                        app:strokeColor="#385AA5"
+                        app:strokeWidth="2dp">
+
+
+                        <Spinner
+                            android:id="@+id/planets_spinner2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:paddingTop="10dp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#ffffff"
+                        app:cardCornerRadius="10dp"
+                        app:strokeColor="#385AA5"
+                        app:strokeWidth="2dp">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:background="@null"
+                            android:ems="10"
+                            android:gravity="left"
+                            android:hint="Улица и номер дома"
+                            android:inputType="text|textNoSuggestions"
+                            android:padding="10dp"
+                            android:paddingRight="30dp"
+                            android:singleLine="true"
+                            android:textColor="#000"
+                            android:textColorHint="#262C6C"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#ffffff"
+                        app:cardCornerRadius="10dp"
+                        app:strokeColor="#385AA5"
+                        app:strokeWidth="2dp">
+
+                        <EditText
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="Комментарий"
+                            android:inputType="textMultiLine|textLongMessage"
+                            android:padding="5dp"
+                            android:singleLine="false"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="@color/main_blue" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#F4F4F8" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textColor="@color/main_blue"
+                        android:text="Способ оплаты"
+                        android:textSize="20sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerOplate"
+                        android:layout_margin="8dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#F4F4F8" />
+
+                    <LinearLayout
+                        android:layout_margin="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_bell_check" />
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_weight="4"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Согласен с условиями"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="доставки"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#F4F4F8" />
+
+                    <Button
+                        android:text="ОФОРМИТЬ ЗАКАЗ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="55dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="55dp"
+                        android:background="@drawable/ic_button"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

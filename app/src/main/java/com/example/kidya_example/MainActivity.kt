@@ -52,9 +52,6 @@ class MainActivity : AppCompatActivity() {
         //    getSupportActionBar()!!.setHomeButtonEnabled(false)
 
 
-
-
-
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
@@ -106,7 +103,6 @@ class MainActivity : AppCompatActivity() {
             navController.navigate(R.id.nav_bell)
         }
 
-
         navView.setNavigationItemSelectedListener {
             Log.d("ttt", "$it")
 
@@ -119,7 +115,11 @@ class MainActivity : AppCompatActivity() {
                 "Мои заказы" -> Toast.makeText(this@MainActivity, "$it", Toast.LENGTH_SHORT).show()
                 "Избранные" -> Toast.makeText(this@MainActivity, "$it", Toast.LENGTH_SHORT).show()
                 "Скидки" -> Toast.makeText(this@MainActivity, "$it", Toast.LENGTH_SHORT).show()
-                "Акции" -> Toast.makeText(this@MainActivity, "$it", Toast.LENGTH_SHORT).show()
+                "Акции" -> {
+                    Toast.makeText(this@MainActivity, "$it", Toast.LENGTH_SHORT).show()
+                    navController.navigate(R.id.nav_first)
+                    drawerLayout.close()
+                }
                 "Сообщения" -> {
                     Toast.makeText(this@MainActivity, "$it", Toast.LENGTH_SHORT).show()
                     navController.navigate(R.id.nav_message)

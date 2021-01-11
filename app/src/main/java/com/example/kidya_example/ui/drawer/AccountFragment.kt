@@ -13,9 +13,10 @@ import com.example.kidya_example.R
 import kotlinx.android.synthetic.main.fragment_account.*
 import java.util.*
 
-class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener{
-
-    //val k:clickListener?=null
+class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener,
+    DrawerAddChildFragment.OnInputListener2 {
+   private var parentView: LinearLayout? = null
+   private var parentView2: LinearLayout? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,12 +29,12 @@ class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val lin = view.findViewById<View>(R.id.rlMain) as LinearLayout
+        parentView = view.findViewById(R.id.ll_left) as LinearLayout
+        parentView2 = view.findViewById(R.id.ll_right) as LinearLayout
 
         date_text.setOnClickListener {
+            setUserVisible()
             showDatePickerDialog()
-
-
         }
 
         imageAccountBack.setOnClickListener {
@@ -41,17 +42,17 @@ class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener{
         }
 
         addDialogText.setOnClickListener {
-            showListDialog()
 
+            showListDialog()
 
         }
 
-        var i = 0
+        spinner(view)
 
-        val mNum = getArguments()?.getInt("num");
-        val textView = TextView(requireContext())
-        textView.text = "textview# ${i++} $mNum"
-        lin.addView(textView)
+
+    }
+
+    private fun spinner(view: View) {
 
         val spinner: Spinner = view.findViewById(R.id.planets_spinner)
         ArrayAdapter.createFromResource(
@@ -80,21 +81,15 @@ class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener{
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             spinner3.adapter = adapter
         }
-
-        val dialog = DrawerAddChildFragment()
-        dialog.getClickItem { pos1, pos2, pos3 ->
-//            Toast.makeText(requireContext(), "$pos1, $pos2, $pos3 ", Toast.LENGTH_SHORT).show()
-          val kk   = pos1
-            Log.d("kkk",kk)
-            Toast.makeText(requireContext(), "pos1, pos2, pos3", Toast.LENGTH_SHORT).show()
-        }
     }
 
     private fun showListDialog() {
-        val dialog = DrawerAddChildFragment()
+        val dialog = DrawerAddChildFragment(this)
 
-        fragmentManager?.let { dialog.show(it, "example2") }
+        //fragmentManager?.let { dialog.show(it, "example2") }
+        dialog.show(childFragmentManager, "diLOG")
     }
+
 
     private fun showDatePickerDialog() {
 
@@ -114,6 +109,38 @@ class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener{
     }
 
 
+    fun setUserVisible() {
+        fragmentManager?.beginTransaction()?.detach(this)?.attach(this)?.commit();
+        Log.i("IsRefresh", "Yes")
+    }
 
 
+    companion object {
+        private const val TAG = "FirstActivity"
+        var komiljon = ""
+    }
+
+    override fun sendInputs(name: String, gender: String, age: String) {
+        Log.d("komiljon", "$name $gender $age")
+
+        val lin = parentView
+        val lin_left = parentView2
+
+        if (name.isNotEmpty()) {
+            var i = 0
+            val textView_name = TextView(requireContext())
+            val textView_gender = TextView(requireContext())
+            val textView_age = TextView(requireContext())
+            textView_name.text = "textview# ${i++} $name"
+            textView_gender.text = "textview# ${i++} $gender"
+            textView_age.text = "textview# ${i++} $age"
+            lin?.addView(textView_name)
+            lin?.addView(textView_gender)
+            lin_left?.addView(textView_age)
+        }else{
+            Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
+        }
+    }
 }
+
+

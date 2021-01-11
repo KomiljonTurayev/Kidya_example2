@@ -1,6 +1,7 @@
 package com.example.kidya_example.ui.drawer
 
 import android.app.DatePickerDialog
+import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -12,16 +13,22 @@ import android.widget.DatePicker
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import com.example.kidya_example.R
-import kotlinx.android.synthetic.main.fragment_account.date_text
 import kotlinx.android.synthetic.main.fragment_drawer_add_child.*
 import java.util.*
 
 
-class DrawerAddChildFragment : DialogFragment(), DatePickerDialog.OnDateSetListener {
+class DrawerAddChildFragment(var listener: OnInputListener2) : DialogFragment(),
+    DatePickerDialog.OnDateSetListener {
 
     //    var onItemClick: ((MockData.SkitkaModel) -> Unit)? = null
 //    var mListener: NoticeDialogListener? = null
-    private var clickListener: ((name: String, gender: String, age: String) -> Unit)? = null
+
+    interface OnInputListener2 {
+        fun sendInputs(name: String, gender: String, age: String)
+    }
+
+    var onInputListener: OnInputListener2? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -93,13 +100,15 @@ class DrawerAddChildFragment : DialogFragment(), DatePickerDialog.OnDateSetListe
             Log.d("ttt", "$name")
 
             if (name?.isNotEmpty() == true && year_.isNotEmpty() && spinner_.isNotEmpty()) {
-//                Toast.makeText(requireContext(), "btnAdd$year_ $spinner_ $name", Toast.LENGTH_SHORT)
-//                    .show()
+                Toast.makeText(requireContext(), "btnAdd$year_ $spinner_ $name", Toast.LENGTH_SHORT)
+                    .show()
+
+//                mListener?.onDialogPositiveClick(name.toString(), spinner_, year_)
+
+                listener.sendInputs(name.toString(), spinner_, year_)
+                dialog!!.dismiss()
 
 
-                clickListener?.invoke(name.toString(), spinner_, year_)
-
-                dialog?.dismiss()
             } else {
                 Toast.makeText(requireContext(), "Please full it", Toast.LENGTH_SHORT).show()
             }
@@ -107,11 +116,6 @@ class DrawerAddChildFragment : DialogFragment(), DatePickerDialog.OnDateSetListe
         }
 
     }
-
-    fun getClickItem(f: (String, String, String) -> Unit) {
-        clickListener = f
-    }
-
 
     override fun onStart() {
         super.onStart()
@@ -139,16 +143,22 @@ class DrawerAddChildFragment : DialogFragment(), DatePickerDialog.OnDateSetListe
         date_text.text = "$month/$dayOfMonth/$year"
     }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        try {
+            onInputListener = activity as OnInputListener2?
+        } catch (e: ClassCastException) {
+            Log.e(TAG, "onAttach: " + e.message)
+        }
+    }
+
     companion object {
         var year_ = ""
         var spinner_ = ""
+        private const val TAG = "MyCustomDialog"
     }
 
 
-
-//    interface NoticeDialogListener {
-//        fun onDialogPositiveClick(name: String, gender: String, age: String)
-//    }
 
 
 }

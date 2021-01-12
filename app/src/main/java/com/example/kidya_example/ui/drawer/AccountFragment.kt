@@ -7,16 +7,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.kidya_example.R
+import com.example.kidya_example.util.inflate
 import kotlinx.android.synthetic.main.fragment_account.*
+import kotlinx.android.synthetic.main.item_input.*
 import java.util.*
 
 class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener,
     DrawerAddChildFragment.OnInputListener2 {
-   private var parentView: LinearLayout? = null
-   private var parentView2: LinearLayout? = null
+    private var parentView: LinearLayout? = null
+    private var parentView2: LinearLayout? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,6 +34,7 @@ class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener,
 
         parentView = view.findViewById(R.id.ll_left) as LinearLayout
         parentView2 = view.findViewById(R.id.ll_right) as LinearLayout
+//        parentView2 = view.findViewById(R.id.layoutGroup) as LinearLayout
 
         date_text.setOnClickListener {
             setUserVisible()
@@ -45,12 +49,53 @@ class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener,
 
             showListDialog()
 
+
         }
 
         spinner(view)
 
-
     }
+
+    override fun sendInputs(name: String, gender: String, age: String) {
+        Log.d("komiljon", "$name $gender $age")
+        val lin_right = parentView
+        val lin_left = parentView2
+//        lin?.inflate(R.layout.item_input) {
+//
+//            textViewName.text = name + "\n"
+//            textViewGender.text = gender.toString()
+//            textViewAge.text = age.toString()
+//
+//        }
+
+//            inputText.setText("")
+
+//        val lin = parentView
+//        val lin_left = parentView2
+//
+        if (name.isNotEmpty()) {
+            var i = 0
+            val textView_name = TextView(requireContext())
+            val textView_gender = TextView(requireContext())
+            val textView_age = TextView(requireContext())
+            textView_name.text = "textview# ${i++} $name"
+            textView_gender.text = "textview# ${i++} $gender"
+            textView_age.text = "textview# ${i++} $age"
+            lin_left?.getChildAt(R.id.textViewName)
+            lin_right?.getChildAt(R.id.textViewAge)
+            lin_left?.getChildAt(R.id.textViewGender)
+
+
+
+            lin_left?.addView(textView_name)
+            lin_right?.addView(textView_age)
+            lin_left?.addView(textView_gender)
+        }else{
+            Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
+        }
+    }
+//}
+
 
     private fun spinner(view: View) {
 
@@ -90,7 +135,6 @@ class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener,
         dialog.show(childFragmentManager, "diLOG")
     }
 
-
     private fun showDatePickerDialog() {
 
         val datePickerDialog = DatePickerDialog(
@@ -108,39 +152,14 @@ class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener,
         date_text.text = date
     }
 
-
     fun setUserVisible() {
         fragmentManager?.beginTransaction()?.detach(this)?.attach(this)?.commit();
         Log.i("IsRefresh", "Yes")
     }
 
+    companion object {        private const val TAG = "FirstActivity"    }
 
-    companion object {
-        private const val TAG = "FirstActivity"
-        var komiljon = ""
-    }
 
-    override fun sendInputs(name: String, gender: String, age: String) {
-        Log.d("komiljon", "$name $gender $age")
-
-        val lin = parentView
-        val lin_left = parentView2
-
-        if (name.isNotEmpty()) {
-            var i = 0
-            val textView_name = TextView(requireContext())
-            val textView_gender = TextView(requireContext())
-            val textView_age = TextView(requireContext())
-            textView_name.text = "textview# ${i++} $name"
-            textView_gender.text = "textview# ${i++} $gender"
-            textView_age.text = "textview# ${i++} $age"
-            lin?.addView(textView_name)
-            lin?.addView(textView_gender)
-            lin_left?.addView(textView_age)
-        }else{
-            Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
-        }
-    }
 }
 
 

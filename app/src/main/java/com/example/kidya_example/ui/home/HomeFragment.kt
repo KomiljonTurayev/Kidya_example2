@@ -17,7 +17,7 @@ import com.example.kidya_example.adapters.ScreenSlidePagerAdapter
 import com.example.kidya_example.adapters.SkitkaAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlinx.android.synthetic.main.activity_main.view.*
+    import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
@@ -126,5 +126,10 @@ class HomeFragment : Fragment() {
 //            top.text ="OBJECT ${(position + 1)}"
         }.attach()
 
+
+
     }
+
+
+
 }

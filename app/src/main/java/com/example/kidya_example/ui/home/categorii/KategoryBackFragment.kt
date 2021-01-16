@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kidya_example.R
@@ -40,12 +41,17 @@ class KategoryBackFragment : Fragment() {
             Toast.makeText(requireContext(), "filtr", Toast.LENGTH_SHORT).show()
             showListDialog()
         }
+
+        mAdapter.onItemClick={
+            view.findNavController().navigate(R.id.nav_skitka_back)
+        }
     }
 
     private fun showListDialog() {
         val dialog = DialogCategoryFragment()
 
-        getFragmentManager()?.let { dialog.show(it, "example") }
+//        getFragmentManager()?.let { dialog.show(it, "example") }
+        dialog.show(childFragmentManager,"example")
     }
 
 }

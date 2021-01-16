@@ -86,8 +86,19 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_skitka_back -> toolbar.isGone = true
                 R.id.nav_account -> toolbar.isGone = true
                 R.id.nav_message -> toolbar.isGone = true
-                R.id.nav_home -> toolbar.isGone = false
+                R.id.nav_home -> {
+                    toolbar.isGone = false
+                    bottomNavView.isGone = false
+                    drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+                }
                 R.id.nav_grid -> toolbar.isGone = false
+                R.id.nav_first_fragment -> {
+                    toolbar.isGone = true
+                    bottomNavView.isGone = true
+                    drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+                }
+
+
                 else -> supportActionBar?.show()
 
             }
@@ -112,7 +123,11 @@ class MainActivity : AppCompatActivity() {
                     navController.navigate(R.id.nav_account)
                     drawerLayout.close()
                 }
-                "Мои заказы" -> Toast.makeText(this@MainActivity, "$it", Toast.LENGTH_SHORT).show()
+                "Мои заказы" -> {
+                    Toast.makeText(this@MainActivity, "$it", Toast.LENGTH_SHORT).show()
+                    navController.navigate(R.id.nav_order)
+                    drawerLayout.close()
+                }
                 "Избранные" -> Toast.makeText(this@MainActivity, "$it", Toast.LENGTH_SHORT).show()
                 "Скидки" -> Toast.makeText(this@MainActivity, "$it", Toast.LENGTH_SHORT).show()
                 "Акции" -> {

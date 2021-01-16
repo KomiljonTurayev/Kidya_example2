@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingTop="16sp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -30,7 +31,7 @@
             android:layout_gravity="center"
             android:layout_marginStart="16dp"
             android:gravity="center"
-            android:text="Оформление заказа"
+            android:text="Заказ №23536783"
             android:textColor="#222C6B"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -44,18 +45,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ll_top"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/ll_top">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="4dp"
+            android:layout_marginLeft="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="4dp"
             app:cardBackgroundColor="#F9F9FB"
             app:cardCornerRadius="8dp"
-            android:layout_marginLeft="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -70,11 +70,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
                     android:text="В корзине 3 продукта"
                     android:textColor="@color/main_blue"
                     android:textSize="16sp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
                     android:textStyle="bold" />
 
                 <View
@@ -140,10 +140,10 @@
                     </LinearLayout>
 
                     <ImageView
-                        android:layout_marginLeft="16dp"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_gravity="center"
+                        android:layout_marginLeft="16dp"
                         android:background="@drawable/ic_mask" />
 
 
@@ -213,71 +213,6 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="16dp"
                         android:background="@drawable/ic_mask" />
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#F4F4F8" />
-
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:background="#ffffff"
-                    app:cardCornerRadius="10dp"
-                    app:strokeColor="#385AA5"
-                    app:strokeWidth="2dp">
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="30dp"
-                        android:background="@null"
-                        android:ems="10"
-                        android:gravity="left"
-                        android:hint="Введите промокод"
-                        android:inputType="text|textNoSuggestions"
-                        android:padding="10dp"
-                        android:paddingRight="30dp"
-                        android:singleLine="true"
-                        android:textColor="#262C6C"
-                        android:textColorHint="#262C6C"
-                        android:textSize="14sp" />
-
-                </com.google.android.material.card.MaterialCardView>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:padding="4dp"
-                        android:text="Если у вас есть промогод,
-                         введите эго и проверьте
-                         актуалность"
-                        android:textColor="#A9ACC5"
-                        android:textSize="14sp" />
-
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="4dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/ic_button"
-                        android:gravity="center"
-                        android:text="проверить"
-                        android:textColor="#fff"
-                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -383,56 +318,28 @@
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
-
                     </LinearLayout>
 
                 </LinearLayout>
-
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="#F4F4F8" />
 
-
-                <TextView
-                    android:id="@+id/textAuth"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="@color/main_blue"
-                    android:padding="16dp"
-                    android:text="@string/regis"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/btnAuth"
-                    android:text="АВТОРИЗИРОВАТЬЦЯ"
-                    android:layout_width="wrap_content"
-                    android:layout_height="55dp"
-                    android:layout_marginLeft="55dp"
-                    android:layout_marginRight="55dp"
-                    android:background="@drawable/ic_button"
-                    android:gravity="center"
-                    android:textColor="#fff"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
                 <LinearLayout
                     android:id="@+id/llAuth"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="gone">
+                    android:orientation="vertical">
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginRight="20dp"
                         android:background="#ffffff"
-                        android:layout_marginTop="10dp"
                         app:cardCornerRadius="10dp"
                         app:strokeColor="#385AA5"
                         app:strokeWidth="2dp">
@@ -458,8 +365,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
                         android:background="#ffffff"
                         app:cardCornerRadius="10dp"
                         app:strokeColor="#385AA5"
@@ -490,8 +397,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
                         android:background="#ffffff"
                         app:cardCornerRadius="10dp"
                         app:strokeColor="#385AA5"
@@ -503,7 +410,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
-                            android:paddingTop="10dp"/>
+                            android:paddingTop="10dp" />
 
                     </com.google.android.material.card.MaterialCardView>
 
@@ -532,8 +439,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
                         android:background="#ffffff"
                         app:cardCornerRadius="10dp"
                         app:strokeColor="#385AA5"
@@ -587,83 +494,40 @@
                         android:layout_height="1dp"
                         android:background="#F4F4F8" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:textColor="@color/main_blue"
-                        android:text="Способ оплаты"
-                        android:textSize="20sp" />
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerOplate"
-                        android:layout_margin="8dp"
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#F4F4F8" />
-
-                    <LinearLayout
-                        android:layout_margin="8dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="40dp"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_bell_check" />
-
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="40dp"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Согласен с условиями"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="доставки"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#F4F4F8" />
-
-                    <Button
-                        android:text="ОФОРМИТЬ ЗАКАЗ"
-                        android:layout_width="wrap_content"
-                        android:layout_height="55dp"
-                        android:layout_marginLeft="55dp"
-                        android:layout_marginBottom="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginRight="55dp"
-                        android:background="@drawable/ic_button"
-                        android:gravity="center"
-                        android:textColor="#fff"
-                        android:textSize="14sp"
-                        android:textStyle="bold"/>
-
                 </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F4F4F8" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/ic_button"
+                    android:gravity="center"
+                    android:text="ОФОРМИТЬ ЗАКАЗ"
+                    android:textColor="#fff"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/ic_button"
+                    android:gravity="center"
+                    android:text="Оставить отзыв"
+                    android:textColor="#fff"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

@@ -150,6 +150,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:layout_gravity="right"
                             android:paddingTop="10dp" />
 
                     </com.google.android.material.card.MaterialCardView>
@@ -250,6 +252,8 @@
 
 
                 <LinearLayout
+                    android:id="@+id/ll_child"
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -264,15 +268,13 @@
                         <TextView
                             android:id="@+id/textViewName"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:lines="1"
+                            android:layout_height="wrap_content"
                             android:textSize="24sp" />
 
                         <TextView
                             android:id="@+id/textViewGender"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:lines="1"
+                            android:layout_height="wrap_content"
                             android:textSize="24sp" />
 
                     </LinearLayout>
@@ -280,7 +282,7 @@
                     <LinearLayout
                         android:id="@+id/ll_right"
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:orientation="horizontal">
@@ -289,14 +291,16 @@
                             android:id="@+id/textViewAge"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:lines="1"
                             android:textSize="24sp" />
 
                         <ImageView
-                            android:layout_width="25dp"
+                            android:id="@+id/imageBack"
+                            android:layout_width="wrap_content"
                             android:layout_height="25dp"
-                            android:src="@drawable/ic_back" />
+                            android:visibility="gone"
+                            android:src="@drawable/ic_close" />
 
                     </LinearLayout>
                 </LinearLayout>

@@ -15,11 +15,15 @@ import com.example.kidya_example.util.inflate
 import kotlinx.android.synthetic.main.fragment_account.*
 import kotlinx.android.synthetic.main.item_input.*
 import java.util.*
+import kotlin.collections.ArrayList
 
 class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener,
     DrawerAddChildFragment.OnInputListener2 {
     private var parentView: LinearLayout? = null
     private var parentView2: LinearLayout? = null
+    private var content: LinearLayout? = null
+    private var image_close: ImageView? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,9 +36,25 @@ class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener,
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        months.add("январь")
+        months.add("февраль")
+        months.add("март")
+        months.add("апрель")
+        months.add("май")
+        months.add("июнь")
+        months.add("июль")
+        months.add("август")
+        months.add("сентябрь")
+        months.add("октябрь")
+        months.add("ноябрь")
+        months.add("декабрь")
+
         parentView = view.findViewById(R.id.ll_left) as LinearLayout
         parentView2 = view.findViewById(R.id.ll_right) as LinearLayout
 //        parentView2 = view.findViewById(R.id.layoutGroup) as LinearLayout
+        content = view.findViewById(R.id.ll_child)
+        image_close = view.findViewById(R.id.imageBack)
+
 
         date_text.setOnClickListener {
             setUserVisible()
@@ -49,6 +69,8 @@ class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener,
 
             showListDialog()
 
+            content?.visibility = View.VISIBLE
+            image_close?.visibility = View.VISIBLE
 
         }
 
@@ -74,6 +96,8 @@ class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener,
 //        val lin_left = parentView2
 //
         if (name.isNotEmpty()) {
+
+
             var i = 0
             val textView_name = TextView(requireContext())
             val textView_gender = TextView(requireContext())
@@ -84,8 +108,6 @@ class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener,
             lin_left?.getChildAt(R.id.textViewName)
             lin_right?.getChildAt(R.id.textViewAge)
             lin_left?.getChildAt(R.id.textViewGender)
-
-
 
             lin_left?.addView(textView_name)
             lin_right?.addView(textView_age)
@@ -148,7 +170,7 @@ class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener,
     }
 
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
-        val date = "$month/$dayOfMonth/$year"
+        val date = "$dayOfMonth ${months[month]} $year"
         date_text.text = date
     }
 
@@ -157,8 +179,7 @@ class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener,
         Log.i("IsRefresh", "Yes")
     }
 
-    companion object {        private const val TAG = "FirstActivity"    }
-
+    companion object {        private const val TAG = "FirstActivity" ;  val months = ArrayList<String>() }
 
 }
 

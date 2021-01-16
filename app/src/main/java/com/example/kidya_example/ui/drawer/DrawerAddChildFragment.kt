@@ -36,6 +36,7 @@ class DrawerAddChildFragment(var listener: OnInputListener2) : DialogFragment(),
     ): View? {
         // Inflate the layout for this fragment
 
+
         dialog?.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
@@ -108,7 +109,6 @@ class DrawerAddChildFragment(var listener: OnInputListener2) : DialogFragment(),
                 listener.sendInputs(name.toString(), spinner_, year_)
                 dialog!!.dismiss()
 
-
             } else {
                 Toast.makeText(requireContext(), "Please full it", Toast.LENGTH_SHORT).show()
             }
@@ -140,7 +140,7 @@ class DrawerAddChildFragment(var listener: OnInputListener2) : DialogFragment(),
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
 
         year_ = "$year"
-        date_text.text = "$month/$dayOfMonth/$year"
+        val date = "$dayOfMonth ${AccountFragment.months[month]} $year"
     }
 
     override fun onAttach(context: Context) {
@@ -155,7 +155,7 @@ class DrawerAddChildFragment(var listener: OnInputListener2) : DialogFragment(),
     companion object {
         var year_ = ""
         var spinner_ = ""
-        private const val TAG = "MyCustomDialog"
+        private const val TAG = "MyCustomDialog";
     }
 
 

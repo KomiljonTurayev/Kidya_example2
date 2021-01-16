@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout12"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".ui.enter.FirstFragment">
+
+    <ImageView
+        android:id="@+id/imageViewFirst"
+        android:layout_width="289.47dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logotype"
+        android:text="@string/hello_blank_fragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageViewFirstTop"
+        android:layout_width="220dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/logotype"
+        android:text="@string/hello_blank_fragment"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/some_id"
+        android:layout_width="253dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="Авторизация"
+        android:textColor="@color/main_blue"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewFirstTop"
+        app:layout_constraintStart_toStartOf="@+id/imageViewFirstTop"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFirstTop" />
+
+    <TextView
+        android:id="@+id/about_auth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:maxLines="3"
+        android:paddingLeft="20sp"
+
+        android:paddingRight="20sp"
+        android:text="Для продолжения покупки пожалуйста авторизуйтесь через номер телефона"
+        android:textColor="@color/main_blue"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/some_id"
+        app:layout_constraintStart_toStartOf="@+id/some_id"
+        app:layout_constraintTop_toBottomOf="@+id/some_id" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="#ffffff"
+        android:visibility="gone"
+
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_auth"
+        app:strokeColor="#385AA5"
+        app:strokeWidth="2dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Номер телефона"
+            android:inputType="text|textNoSuggestions"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="#262C6C"
+            android:textColorHint="#262C6C"
+            android:textSize="18sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="#ffffff"
+
+        android:visibility="gone"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCode"
+        app:strokeColor="#385AA5"
+        app:strokeWidth="2dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:ems="10"
+            android:id="@+id/editPhoneNumber"
+            android:gravity="center"
+            android:hint="Смс-код"
+            android:inputType="text|textNoSuggestions"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="#262C6C"
+            android:textColorHint="#262C6C"
+            android:textSize="18sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/textCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Отправить код еще раз"
+        android:textColor="@color/main_blue"
+
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView2" />
+
+
+    <Button
+        android:id="@+id/btnAuth"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_shape"
+        android:gravity="center"
+        android:text="Получить смс-код"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/materialCardView3"
+        app:layout_constraintStart_toStartOf="@+id/materialCardView3"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView3"
+        />
+
+
+    <TextView
+        android:id="@+id/textAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Авторизация через"
+        android:textColor="@color/main_blue"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewFacebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewFacebook"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="4dp"
+
+        android:background="@drawable/ic_auth_back"
+        android:padding="4dp"
+        android:src="@drawable/ic_facebook__1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewGoogle"
+        app:layout_constraintStart_toStartOf="@+id/textAuto" />
+
+    <ImageView
+        android:id="@+id/imageViewGoogle"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/ic_auth_back"
+        android:padding="4dp"
+        android:src="@drawable/ic_google2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewFacebook"
+        app:layout_constraintEnd_toEndOf="@+id/textAuto"
+        app:layout_constraintTop_toTopOf="@+id/imageViewFacebook"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

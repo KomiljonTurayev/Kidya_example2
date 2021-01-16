@@ -1,6 +1,8 @@
 package com.example.kidya_example.network.dto
 
 import com.example.kidya_example.R
+import java.util.*
+import kotlin.collections.ArrayList
 
 class MockData {
 
@@ -371,7 +373,7 @@ class MockData {
                             "                            \"реципиент."
                 )
             )
-              list.add(
+            list.add(
                 BellData(
                     "Акция «Счастливые часы»",
                     "29 сентября",
@@ -392,7 +394,7 @@ class MockData {
                             "                            \"реципиент."
                 )
             )
-              list.add(
+            list.add(
                 BellData(
                     "Акция «Счастливые часы»",
                     "29 сентября",
@@ -413,7 +415,7 @@ class MockData {
                             "                            \"реципиент."
                 )
             )
-              list.add(
+            list.add(
                 BellData(
                     "Акция «Счастливые часы»",
                     "29 сентября",
@@ -439,6 +441,53 @@ class MockData {
             return list
         }
 
+
+        fun getMessageChatList(): List<BaseData> {
+            val data = ArrayList<BaseData>()
+
+            data.add(SellerData("Добрый день, Томара", "22:30"))
+            data.add(
+                ClientData(
+                    "Здравствуйте, Суннат. Как ваши дела?\n" +
+                            "Чем могу помочь?", "22:32"
+                )
+            )
+            data.add(
+                SellerData(
+                    "У меня вопрос по добавлению\n" +
+                            "продукции", "22:30"
+                )
+            )
+            data.add(SellerData("Добрый день, Томара", "22:30"))
+            data.add(
+                ClientData(
+                    "Здравствуйте, Суннат. Как ваши дела?\n" +
+                            "Чем могу помочь?", "22:32"
+                )
+            )
+            data.add(
+                SellerData(
+                    "У меня вопрос по добавлению\n" +
+                            "продукции", "22:30"
+                )
+            )
+            data.add(SellerData("Добрый день, Томара", "22:30"))
+            data.add(
+                ClientData(
+                    "Здравствуйте, Суннат. Как ваши дела?\n" +
+                            "Чем могу помочь?", "22:32"
+                )
+            )
+            data.add(
+                SellerData(
+                    "У меня вопрос по добавлению\n" +
+                            "продукции", "22:30"
+                )
+            )
+//            Collections.shuffle(data)
+
+            return data
+        }
     }
 
     data class Category(
@@ -467,4 +516,19 @@ class MockData {
 
     data class BellData(val aksiya: String, val date: String, val text: String)
 
+
+    data class SellerData(
+        val name: String,
+        val number: String
+    ) : BaseData()
+
+
+    data class ClientData(
+        val name: String,
+        val number: String
+    ) : BaseData()
+
+
+    open class BaseData {
+    }
 }

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/nav_first_fragment">
 
     <fragment
         android:id="@+id/nav_home"
@@ -94,5 +94,25 @@
         android:id="@+id/nav_custom_dialog"
         android:name="com.example.kidya_example.ui.drawer.MyCustomDialog"
         android:label="MyCustomDialog" />
+    <fragment
+        android:id="@+id/nav_first_fragment"
+        android:name="com.example.kidya_example.ui.enter.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first2" />
+    <fragment
+        android:id="@+id/nav_order"
+        android:name="com.example.kidya_example.ui.order.OrderFragment"
+        android:label="fragment_order"
+        tools:layout="@layout/fragment_order" />
+    <fragment
+        android:id="@+id/nav_order_back"
+        android:name="com.example.kidya_example.ui.order.OrderFragmentBack"
+        android:label="fragment_order_back"
+        tools:layout="@layout/fragment_order_back" />
+    <fragment
+        android:id="@+id/nav_message_chat"
+        android:name="com.example.kidya_example.ui.drawer.MessageChatFragment"
+        android:label="fragment_message_chat"
+        tools:layout="@layout/fragment_message_chat" />
 
 </navigation>

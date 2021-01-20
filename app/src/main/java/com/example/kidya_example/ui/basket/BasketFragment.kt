@@ -35,7 +35,7 @@ class BasketFragment : Fragment() {
 
         //RecyclerView
         recyclerOplate.layoutManager = GridLayoutManager(requireContext(), 2,GridLayoutManager.VERTICAL,false)
-        val mAdapter = DialogCheckAdapter(true)
+        val mAdapter = DialogCheckAdapter()
         recyclerOplate.adapter = mAdapter
 
         imageBackHome.setOnClickListener {

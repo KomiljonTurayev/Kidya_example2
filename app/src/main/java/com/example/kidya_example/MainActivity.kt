@@ -97,8 +97,9 @@ class MainActivity : AppCompatActivity() {
                     bottomNavView.isGone = true
                     drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
                 }
-
-
+                R.id.nav_message_chat -> {
+                    toolbar.isGone = true
+                }
                 else -> supportActionBar?.show()
 
             }
@@ -128,8 +129,16 @@ class MainActivity : AppCompatActivity() {
                     navController.navigate(R.id.nav_order)
                     drawerLayout.close()
                 }
-                "Избранные" -> Toast.makeText(this@MainActivity, "$it", Toast.LENGTH_SHORT).show()
-                "Скидки" -> Toast.makeText(this@MainActivity, "$it", Toast.LENGTH_SHORT).show()
+                "Избранные" -> {
+                    Toast.makeText(this@MainActivity, "$it", Toast.LENGTH_SHORT).show()
+                    navController.navigate(R.id.nav_favourites)
+                    drawerLayout.close()
+                }
+                "Скидки" -> {
+                    Toast.makeText(this@MainActivity, "$it", Toast.LENGTH_SHORT).show()
+                    navController.navigate(R.id.nav_skitka_back)
+                    drawerLayout.close()
+                }
                 "Акции" -> {
                     Toast.makeText(this@MainActivity, "$it", Toast.LENGTH_SHORT).show()
                     navController.navigate(R.id.nav_first)

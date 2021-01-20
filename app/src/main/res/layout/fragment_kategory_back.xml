@@ -52,7 +52,9 @@
                 android:layout_gravity="center"
                 android:layout_marginEnd="8dp"
                 android:background="#F9F9FB"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="8dp"
+                android:padding="8dp"
                 app:cardBackgroundColor="#F9F9FB"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -64,10 +66,9 @@
                     android:id="@+id/filtr"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
+                    android:layout_margin="8dp"
                     android:background="#F9F9FB"
                     android:orientation="horizontal"
-                    android:padding="4dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -83,11 +84,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:padding="4dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
                         android:text="Фильтр"
                         android:textColor="#262C6C"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textSize="14sp"
+                         />
 
                 </LinearLayout>
 

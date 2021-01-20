@@ -8,59 +8,109 @@
     android:padding="10dp"
     android:paddingBottom="20dp">
 
-    <com.google.android.material.card.MaterialCardView
+    <FrameLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#F5F5F9"
-        app:strokeColor="#F5F5F9"
-        app:strokeWidth="1dp"
-        app:cardCornerRadius="16dp">
+        android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView4"
             android:layout_width="wrap_content"
-            android:background="#FFFFFF"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#F5F5F9"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#F5F5F9"
+            app:strokeWidth="1dp">
 
-            <ImageView
-                android:id="@+id/imageDress"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="14dp"
-                android:src="@drawable/image_2"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:background="#FFFFFF">
+
+                <ImageView
+                    android:id="@+id/imageDress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="14dp"
+                    android:src="@drawable/image_2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
-            <TextView
-                android:id="@+id/text_wish"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_box"
-                android:gravity="center"
-                android:text="NEW"
-                android:textColor="#fff"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/image_heart"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_gravity="bottom"-->
+                <!--                    android:layout_marginStart="16dp"-->
+                <!--                    android:layout_marginBottom="24dp"-->
+                <!--                    android:padding="4dp"-->
+
+                <!--                    android:src="@drawable/empty_heart"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent" />-->
+
+                <FrameLayout
+                    android:id="@+id/image_heart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:padding="4dp"
+                    android:src="@drawable/empty_heart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/skitkaHeartFull"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/full_heart"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/skitkaHeartEmpty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_favorite_border_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </FrameLayout>
 
 
-            <ImageView
-                android:id="@+id/image_heart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="24dp"
-                android:padding="4dp"
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-                android:src="@drawable/empty_heart"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:id="@+id/text_wish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_box"
+            android:gravity="center"
+            android:text="NEW"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </FrameLayout>
 
     <TextView
         android:id="@+id/textNarx"
@@ -76,17 +126,16 @@
         style="?android:attr/ratingBarStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:numStars="5"
-        android:progressTint="#FFBB3C"
-        android:rating="4"
-        android:secondaryProgressTint="#FFBB3C"
-        android:stepSize="0.25"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
-        />
+        android:numStars="5"
+        android:progressTint="#FFBB3C"
+        android:rating="4"
+        android:secondaryProgressTint="#FFBB3C"
+        android:stepSize="0.25" />
 
     <TextView
         android:id="@+id/textDress"

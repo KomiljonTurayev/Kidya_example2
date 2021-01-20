@@ -13,14 +13,14 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.kidya_example.R
 import com.example.kidya_example.adapters.DialogColorAdapter
 import com.example.kidya_example.adapters.DialogSizeAdapter
-import com.example.kidya_example.adapters.ScreenSlidePagerAdapter
+import com.example.kidya_example.adapters.ScreenSlidePagerAdapter2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.fragment_skitka_back.*
 
 class SkitkaBackFragment : Fragment() {
 
-    private lateinit var adapterViewPager2: ScreenSlidePagerAdapter
+    private lateinit var adapterViewPager2: ScreenSlidePagerAdapter2
     private lateinit var viewPager2: ViewPager2
     private lateinit var tabLayout: TabLayout
 
@@ -47,7 +47,7 @@ class SkitkaBackFragment : Fragment() {
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
         viewPager2 = view.findViewById(R.id.viewPager)
-        adapterViewPager2 = ScreenSlidePagerAdapter(this)
+        adapterViewPager2 = ScreenSlidePagerAdapter2(this)
         tabLayout = view.findViewById(R.id.tabLayoutViewPager2)
 
         viewPager2.adapter = adapterViewPager2

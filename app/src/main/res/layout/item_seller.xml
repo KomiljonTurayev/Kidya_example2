@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="end"
+    android:background="#ffffff"
     android:gravity="end"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintTop_toTopOf="parent"
@@ -19,18 +20,18 @@
         android:layout_gravity="left"
         android:background="#ffffff"
         android:gravity="end"
-        app:cardCornerRadius="20dp"
+        app:cardCornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:strokeColor="#385AA5"
+        app:strokeColor="#F5F5F9"
         app:strokeWidth="2dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:background="#F9F9FB"
+            android:background="#ffffff"
             android:orientation="vertical"
             android:padding="16dp">
 

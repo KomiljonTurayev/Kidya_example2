@@ -201,9 +201,11 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:layout_weight="1"
-                android:background="#F9F9FB"
+                app:cardBackgroundColor="#F9F9FB"
                 android:orientation="horizontal"
                 app:cardCornerRadius="10dp"
+                android:padding="8dp"
+                android:background="#F9F9FB"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:strokeColor="#F9F9FB"
@@ -213,13 +215,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#F9F9FB"
+                    android:layout_marginStart="16dp"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:gravity="center"
+                        android:gravity="left|center"
                         android:text="Цвет"
                         android:textColor="#222C6B"
                         android:textSize="18sp"
@@ -247,6 +250,8 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:layout_weight="1"
+                app:cardBackgroundColor="#F9F9FB"
+                android:padding="8dp"
                 android:background="#F9F9FB"
                 android:orientation="horizontal"
                 app:cardCornerRadius="10dp"
@@ -259,6 +264,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#F9F9FB"
+                    android:layout_marginStart="16dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -294,8 +300,9 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:layout_weight="1"
+                app:cardBackgroundColor="#F9F9FB"
+                android:padding="8dp"
                 android:orientation="horizontal"
-                android:padding="4dp"
                 app:cardCornerRadius="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -306,6 +313,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#F9F9FB"
+                    android:layout_marginStart="16dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -323,7 +331,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_weight="2"
+                        android:layout_weight="1.5"
                         android:gravity="center"
                         android:orientation="horizontal">
 

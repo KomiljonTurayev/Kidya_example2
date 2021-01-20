@@ -355,7 +355,7 @@
                             android:padding="10dp"
                             android:paddingRight="30dp"
                             android:singleLine="true"
-                            android:textColor="#000"
+                            android:textColor="#262C6C"
                             android:textColorHint="#262C6C"
                             android:textSize="16sp" />
 
@@ -380,13 +380,10 @@
                             android:ems="10"
                             android:gravity="left"
                             android:hint="Телефон"
-                            android:inputType="text|textNoSuggestions"
-                            android:numeric="decimal"
+                            android:inputType="phone"
                             android:padding="10dp"
                             android:paddingRight="30dp"
-                            android:phoneNumber="true"
                             android:singleLine="true"
-
                             android:textColor="#000"
                             android:textColorHint="#262C6C"
                             android:textSize="16sp" />
@@ -400,12 +397,14 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="20dp"
                         android:background="#ffffff"
+                        android:layout_gravity="center"
                         app:cardCornerRadius="10dp"
                         app:strokeColor="#385AA5"
                         app:strokeWidth="2dp">
 
 
                         <Spinner
+                            android:gravity="center"
                             android:id="@+id/planets_spinner"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

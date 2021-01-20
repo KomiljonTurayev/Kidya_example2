@@ -49,11 +49,11 @@ class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener,
         months.add("ноябрь")
         months.add("декабрь")
 
-        parentView = view.findViewById(R.id.ll_left) as LinearLayout
-        parentView2 = view.findViewById(R.id.ll_right) as LinearLayout
+//        parentView = view.findViewById(R.id.ll_left) as LinearLayout
+//        parentView2 = view.findViewById(R.id.ll_right) as LinearLayout
 //        parentView2 = view.findViewById(R.id.layoutGroup) as LinearLayout
         content = view.findViewById(R.id.ll_child)
-        image_close = view.findViewById(R.id.imageBack)
+//        image_close = view.findViewById(R.id.imageBack)
 
 
         date_text.setOnClickListener {
@@ -69,8 +69,8 @@ class AccountFragment : Fragment(), DatePickerDialog.OnDateSetListener,
 
             showListDialog()
 
-            content?.visibility = View.VISIBLE
-            image_close?.visibility = View.VISIBLE
+//            content?.visibility = View.VISIBLE
+//            image_close?.visibility = View.VISIBLE
 
         }
 

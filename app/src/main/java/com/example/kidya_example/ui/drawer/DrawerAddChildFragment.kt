@@ -157,8 +157,4 @@ class DrawerAddChildFragment(var listener: OnInputListener2) : DialogFragment(),
         var spinner_ = ""
         private const val TAG = "MyCustomDialog";
     }
-
-
-
-
 }

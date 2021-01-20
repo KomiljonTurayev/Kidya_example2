@@ -176,7 +176,7 @@
                             android:ems="10"
                             android:gravity="left"
                             android:hint="+998 97 765 22 32"
-                            android:inputType="text|textNoSuggestions"
+                            android:inputType="phone"
                             android:padding="10dp"
                             android:paddingRight="30dp"
                             android:singleLine="true"
@@ -258,51 +258,51 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:id="@+id/ll_left"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/ll_left"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical">-->
 
-                        <TextView
-                            android:id="@+id/textViewName"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="24sp" />
+<!--                        <TextView-->
+<!--                            android:id="@+id/textViewName"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textSize="24sp" />-->
 
-                        <TextView
-                            android:id="@+id/textViewGender"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="24sp" />
+<!--                        <TextView-->
+<!--                            android:id="@+id/textViewGender"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textSize="24sp" />-->
 
-                    </LinearLayout>
+<!--                    </LinearLayout>-->
 
-                    <LinearLayout
-                        android:id="@+id/ll_right"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="horizontal">
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/ll_right"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="horizontal">-->
 
-                        <TextView
-                            android:id="@+id/textViewAge"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:lines="1"
-                            android:textSize="24sp" />
+<!--                        <TextView-->
+<!--                            android:id="@+id/textViewAge"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:lines="1"-->
+<!--                            android:textSize="24sp" />-->
 
-                        <ImageView
-                            android:id="@+id/imageBack"
-                            android:layout_width="wrap_content"
-                            android:layout_height="25dp"
-                            android:visibility="gone"
-                            android:src="@drawable/ic_close" />
+<!--                        <ImageView-->
+<!--                            android:id="@+id/imageBack"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="25dp"-->
+<!--                            android:visibility="gone"-->
+<!--                            android:src="@drawable/ic_close" />-->
 
-                    </LinearLayout>
+<!--                    </LinearLayout>-->
                 </LinearLayout>
                 </LinearLayout>
 <!--            <LinearLayout-->

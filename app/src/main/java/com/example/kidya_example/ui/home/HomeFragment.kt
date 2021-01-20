@@ -112,7 +112,7 @@ class HomeFragment : Fragment() {
         list2.add(R.drawable.image_middle)
 
         adapterViewPager2.update(list)
-        adapterViewPager2Middle.update(list2)
+        adapterViewPager2Middle.update(list)
 
 //        val tabLayout = view.findViewById(R.id.tabLayoutViewPager2Top)
 

@@ -52,7 +52,8 @@ class FirstFragment : Fragment() {
                 view.findNavController().navigate(R.id.nav_home)
 
             } else {
-                editPhoneNumber.hint = "998 93 004 10 24"
+                editPhoneNumber.hint = "Смс-код"
+                editHintPhoneNumber.hint = "998 93 004 10 24"
                 textCode.visibility = View.VISIBLE
                 materialCardView3.visibility = View.VISIBLE
                 imageViewFacebook.visibility = View.INVISIBLE

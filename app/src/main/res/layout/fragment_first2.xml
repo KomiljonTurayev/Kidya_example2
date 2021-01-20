@@ -74,7 +74,6 @@
         android:layout_margin="20dp"
         android:background="#ffffff"
         android:visibility="gone"
-
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,9 +87,10 @@
             android:layout_gravity="center"
             android:background="@null"
             android:ems="10"
+            android:id="@+id/editHintPhoneNumber"
+            android:inputType="phone"
             android:gravity="center"
             android:hint="Номер телефона"
-            android:inputType="text|textNoSuggestions"
             android:padding="10dp"
             android:singleLine="true"
             android:textColor="#262C6C"
@@ -118,15 +118,15 @@
         app:strokeWidth="2dp">
 
         <EditText
+            android:id="@+id/editPhoneNumber"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_gravity="center"
             android:background="@null"
             android:ems="10"
-            android:id="@+id/editPhoneNumber"
             android:gravity="center"
             android:hint="Смс-код"
-            android:inputType="text|textNoSuggestions"
+            android:inputType="number"
             android:padding="10dp"
             android:singleLine="true"
             android:textColor="#262C6C"
@@ -161,8 +161,7 @@
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/materialCardView3"
         app:layout_constraintStart_toStartOf="@+id/materialCardView3"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView3"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView3" />
 
 
     <TextView
@@ -186,8 +185,8 @@
         android:layout_margin="4dp"
 
         android:background="@drawable/ic_auth_back"
-        android:padding="4dp"
-        android:src="@drawable/ic_facebook__1"
+        android:padding="12dp"
+        android:src="@drawable/ic_icon_facebook__2"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageViewGoogle"
@@ -200,13 +199,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/ic_auth_back"
-        android:padding="4dp"
         android:src="@drawable/ic_google2"
         android:visibility="gone"
+        android:padding="4dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewFacebook"
         app:layout_constraintEnd_toEndOf="@+id/textAuto"
         app:layout_constraintTop_toTopOf="@+id/imageViewFacebook"
         app:layout_constraintVertical_bias="0.0" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

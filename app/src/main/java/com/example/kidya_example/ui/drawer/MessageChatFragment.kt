@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,7 +14,6 @@ import com.example.kidya_example.R
 import com.example.kidya_example.adapters.DrawerMessageAdapter
 import com.example.kidya_example.adapters.MessageChattingAdapter
 import com.example.kidya_example.adapters.showToast
-import kotlinx.android.synthetic.main.fragment_message.*
 import kotlinx.android.synthetic.main.fragment_message_chat.*
 
 class MessageChatFragment : Fragment() {
@@ -36,8 +36,16 @@ class MessageChatFragment : Fragment() {
         recyclerDrawerMessage.adapter = mAdapter
 
         mAdapter.setOnItemClickListener {
-            view.findNavController().popBackStack(R.id.nav_message_chat, false)
+            Toast.makeText(requireContext(), "$it", Toast.LENGTH_SHORT).show()
         }
+//        mAdapter.setOnItemClickListener {
+//            view.findNavController().navigate(R.id.nav_message)
+//        }
+        imageMessageBack?.setOnClickListener {
+            view.findNavController().navigate(R.id.nav_message)
+        }
+
+
 
 
 //        val  mAdapter = MessageChattingAdapter()

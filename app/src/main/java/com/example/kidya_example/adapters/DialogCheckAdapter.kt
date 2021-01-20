@@ -1,23 +1,18 @@
 package com.example.kidya_example.adapters
 
-import android.content.res.ColorStateList
-import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kidya_example.R
 import com.example.kidya_example.network.dto.MockData
 import kotlinx.android.synthetic.main.item_check_text.view.*
-import kotlinx.android.synthetic.main.item_color.view.*
-import kotlinx.android.synthetic.main.item_size.view.*
 
-class DialogCheckAdapter(val oplate:Boolean = false) : RecyclerView.Adapter<DialogCheckAdapter.ViewHolder>() {
+class DialogCheckAdapter : RecyclerView.Adapter<DialogCheckAdapter.ViewHolder>() {
 
-    val list = if(oplate)
-        MockData.getItemOplateList()
-        else MockData.getItemMaterialList()
+    val list = MockData.getItemMaterialList()
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -32,16 +27,38 @@ class DialogCheckAdapter(val oplate:Boolean = false) : RecyclerView.Adapter<Dial
             itemView.setOnClickListener {
                 Log.d("ttt", " itemView.setOnClickListener   ")
 
-                i = (i + 1) % 2
-                if (i == 1) {
-                    image.visibility = View.INVISIBLE
-                } else {
-                    image.visibility = View.VISIBLE
-                    i = 0
+//                i = (i + 1) % 2
+//                if (i == 1) {
+//                    image.visibility = View.INVISIBLE
+//                } else {
+//                    image.visibility = View.VISIBLE
+//                    i = 0
+//
+//                }
 
+
+                when {
+                    last != -1 -> {
+                        image.visibility = View.INVISIBLE
+                        Toast.makeText(itemView.context, "$adapterPosition", Toast.LENGTH_SHORT).show()
+                        notifyDataSetChanged()
+                    }
+                    last == position -> {
+                        image.visibility = View.INVISIBLE
+                        last = -1
+                        Toast.makeText(itemView.context, "$adapterPosition", Toast.LENGTH_SHORT).show()
+                        notifyDataSetChanged()
+                    }
+                    else -> {
+                        image.visibility = View.VISIBLE
+                        last = position
+                        Toast.makeText(itemView.context, "$adapterPosition", Toast.LENGTH_SHORT).show()
+                        notifyDataSetChanged()
+                    }
                 }
             }
         }
+
 
         fun bind(item: MockData.ItemDialog) {
             itemView.apply {
@@ -57,6 +74,7 @@ class DialogCheckAdapter(val oplate:Boolean = false) : RecyclerView.Adapter<Dial
 
             }
         }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -70,4 +88,8 @@ class DialogCheckAdapter(val oplate:Boolean = false) : RecyclerView.Adapter<Dial
         holder.bind(list[position])
 
     override fun getItemCount() = list.size
+
+    companion object {
+        var last = -1
+    }
 }

@@ -1,8 +1,6 @@
 package com.example.kidya_example.network.dto
 
 import com.example.kidya_example.R
-import java.util.*
-import kotlin.collections.ArrayList
 
 class MockData {
 
@@ -488,6 +486,32 @@ class MockData {
 
             return data
         }
+
+        fun getOrderDataList(): List<OrderData> {
+            val item = ArrayList<ItemData>()
+            item.add(ItemData(R.drawable.image_2, "Розовое платье с кружевами", "Kids World Shop"))
+            item.add(ItemData(R.drawable.image2, "Малиновый  сарафан", "No Brand Shop"))
+            item.add(ItemData(R.drawable.image_2, "Розовое платье с кружевами", "Kids World Shop"))
+            item.add(ItemData(R.drawable.image2, "Малиновый  сарафан", "No Brand Shop"))
+
+            val item2 = ArrayList<ItemData>()
+            item2.add(ItemData(R.drawable.image_2, "Розовое платье с кружевами", "Kids World Shop"))
+            item2.add(ItemData(R.drawable.image2, "Малиновый  сарафан", "No Brand Shop"))
+
+            val data = ArrayList<OrderData>()
+            data.add(
+                OrderData(
+                    "Заказ №23536783", "30 сентября", "225 000 сум", 3, item
+                )
+            )
+            data.add(
+                OrderData(
+                    "Заказ №23536783", "30 сентября", "225 000 сум", 2, item2
+                )
+            )
+
+            return data
+        }
     }
 
     data class Category(
@@ -528,7 +552,18 @@ class MockData {
         val number: String
     ) : BaseData()
 
+    open class BaseData
 
-    open class BaseData {
-    }
+    data class OrderData(
+        var orderName: String,
+        val data: String,
+        val cost: String,
+        var type:Int,
+        val item: List<ItemData>
+    )
+
+    data class ItemData(
+        var image: Int, val product: String, val shopName: String
+    )
+
 }

@@ -1,5 +1,6 @@
 package com.example.kidya_example.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kidya_example.R
 import com.example.kidya_example.network.dto.MockData
+import kotlinx.android.synthetic.main.fragment_skitka_back.*
 import kotlinx.android.synthetic.main.item_favourite.view.*
 
 class SkitkaAdapter(val wish: Boolean = false) :
@@ -25,9 +27,22 @@ class SkitkaAdapter(val wish: Boolean = false) :
 //                view.findNavController().navigate(R.id.nav_skitka_back)
 //                view.findNavController().navigate(R.id.nav_news_back)
             }
-
+            var k = 0
             news.setOnClickListener {
                 Toast.makeText(itemView.context, "fav clickes", Toast.LENGTH_SHORT).show()
+                Log.d("ttt", " image_heart.setOnClickListener   ")
+                k = (k + 1) % 2
+
+                if (k == 1) {
+                    view.skitkaHeartFull.visibility = View.VISIBLE
+                    Toast.makeText(itemView.context, "imgFull", Toast.LENGTH_SHORT).show()
+                } else {
+                    view.skitkaHeartFull.visibility = View.INVISIBLE
+                    Toast.makeText(itemView.context, "imgEmpty", Toast.LENGTH_SHORT).show()
+                    k = 0
+                }
+
+//                onItemClick?.invoke(list[adapterPosition])
             }
         }
 

@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.kidya_example.R
 import com.example.kidya_example.adapters.SkitkaAdapter
 import kotlinx.android.synthetic.main.fragment_basket.*
+import kotlinx.android.synthetic.main.item_favourite.*
+import kotlinx.android.synthetic.main.item_favourite.view.*
 
 class FavouritesFragment : Fragment() {
 
